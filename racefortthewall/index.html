@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Race for the wall - Choose your character</title>
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+    <link rel="stylesheet" href="assets/stylesheets/animate.min.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+
+</head>
+<body>
+
+    <!-- CHARACTER SELECT SCREEN -->
+
+    <div id="page01">
+        <div class="wrapper">
+            <div class="left">
+                <div class="map">
+                    <img src="assets/images/page01_map.jpg">
+
+                </div>
+                
+            </div>
+            <div class="right">
+                
+                <div class="top">
+                    <h1>CHOOSE YOUR ALLEGIANCE</h1>
+                </div>
+    
+                <div class="houses" id="housesContainer">
+                    
+    
+                </div>
+    
+                <div class="buttons">
+                    <button class="play" id="playButton" disabled>TO BATTLE</button>
+                    <button class="clear" id="clearButton" disabled>CHOOSE AGAIN</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="additional_house_info" id="additional_house_info">
+            
+        </div>
+        
+        <div class="welcome" id="welcome">
+            <div class="heading">A RACE TO THE WALL</div>
+            <div class="text">
+                We are all in great peril! The Night King and his army of dead are closing in on the Seven Kingdoms. You are our only hope to deliver the <span>SHARD OF DRAGONGLASS</span> to the brave men at Castle Black. Send forth your hero and let the great houses of Westeros show the Night King which house rules in the West.
+                
+                <div>
+                    Goodspeed heroes!
+                </div>
+            </div>
+            <div class="close_welcome" id="close_welcome">X</div>            
+
+        </div>
+                
+    </div>
+
+    <!-- GAME SCREEN -->
+
+    <div id="page02">
+        <canvas id="canvas">
+
+        </canvas>
+        <div class="logo">
+            <img src="assets/images/logo_small.jpg" alt="Race for the wall logo">
+    
+        </div>
+    
+        <div class="dice" id="playerBox">
+        </div>
+
+
+        <div class="round" id="currentRound">
+            ROUND <span ></span>
+        </div>
+        
+        <div class="flashBanner" id="flashBanner">
+        </div>
+            
+        <div class="trap" id="trapBox">
+            <img src="assets/images/trap_image.png" alt="It's a trap!">
+            <div class="message">
+   
+            </div>
+        </div>
+    </div>
+
+    <!-- WINNER/LOOSER SCREEN -->
+
+    <div id="page03">
+
+        <div class="top">
+            <div class="heading">
+                A BATTLE WELL FOUGHT
+            </div>
+            <div class="subheading">
+                    The SHARD OF DRAGONGLASS was delivered safely to Castle Black by HOUSE <span id="winnerHouseEnd"></span>! <br>
+                    The Night King and his army was defeated!
+            </div>
+        </div>
+
+        <div class="score">
+            <div class="player winner" id="winnerElement">
+                <div class="subheading">
+                    WINNER
+                </div>
+                <div id="winnerHouse" class="house">
+                </div>
+            </div>
+            <div class="player looser" id="looserElement">
+                <div class="subheading">
+                    LOOSER
+                </div>
+                <div id="looserHouse" class="house">
+                </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div id="audio">
+        <audio loop controls autoplay>
+            <source src="assets/music/rftw_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    </div>
+    
+    <script src="assets/js/public/utilities.js" type="text/javascript"></script>
+    <script src="assets/js/public/classes.js" type="text/javascript"></script>
+    <script>
+        var newGame = new Game();
+    </script>
+    <script src="assets/js/public/methods.js" type="text/javascript"></script>
+    <script src="assets/js/public/app.js" type="text/javascript"></script>
+    
+</body>
+</html>

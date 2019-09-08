@@ -1,0 +1,19 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "app": "babel ./src/app.js --out-file ./public/app.js",
+    "classes": "babel ./src/classes.js --out-file ./public/classes.js",
+    "methods": "babel ./src/methods.js --out-file ./public/methods.js",
+    "utilities": "babel ./src/utilities.js --out-file ./public/utilities.js"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

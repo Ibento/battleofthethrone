@@ -1,0 +1,629 @@
+/* FONTS */
+@font-face {
+  font-family: 'GameOfThrones';
+  src: url("../fonts/got.ttf");
+}
+@font-face {
+  font-family: FuturaCondencedBold;
+  src: url("../fonts/futura_condenced_bold.otf") format("opentype");
+}
+@font-face {
+  font-family: FuturaCondencedRegular;
+  src: url("../fonts/futura_condenced_regular.ttf");
+}
+/* COLORS */
+/* GENERAL STYLES AND RESETS */
+/* line 30, ../sass/styles.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #010101;
+  background-color: #f6e7d1;
+  overscroll-behavior: none;
+}
+
+/* line 39, ../sass/styles.scss */
+html, body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* line 48, ../sass/styles.scss */
+div#audio {
+  display: inline-block;
+  position: fixed;
+  left: 70px;
+  bottom: 70px;
+}
+@media screen and (max-width: 1024px) {
+  /* line 48, ../sass/styles.scss */
+  div#audio {
+    display: none;
+  }
+}
+/* line 59, ../sass/styles.scss */
+div#audio audio {
+  width: 200px;
+  background-color: #f6e7d1;
+}
+/* line 62, ../sass/styles.scss */
+div#audio audio::-webkit-media-controls-panel {
+  background-color: #f6e7d1;
+}
+/* line 66, ../sass/styles.scss */
+div#audio audio::-webkit-media-controls-timeline {
+  display: none;
+}
+
+/* line 75, ../sass/styles.scss */
+div#page01 div.welcome {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  width: 35vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6e7d1;
+  border: 10px solid #d6cece;
+  border-radius: 10px;
+  text-align: center;
+  webkit-box-shadow: 3px 3px 10px 10px #242424;
+  -moz-box-shadow: 3px 3px 10px 0px #242424;
+  box-shadow: 3px 3px 10px 0px #242424;
+}
+@media screen and (max-width: 1024px) {
+  /* line 75, ../sass/styles.scss */
+  div#page01 div.welcome {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+/* line 97, ../sass/styles.scss */
+div#page01 div.welcome div.heading {
+  font-family: "GameOfThrones", Arial;
+  font-size: 3rem;
+  width: 80%;
+  margin: 50px auto;
+}
+@media screen and (max-width: 1024px) {
+  /* line 97, ../sass/styles.scss */
+  div#page01 div.welcome div.heading {
+    font-size: 1.5rem;
+  }
+}
+/* line 107, ../sass/styles.scss */
+div#page01 div.welcome div.text {
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  font-size: 2rem;
+  width: 80%;
+  margin: 50px auto;
+}
+/* line 112, ../sass/styles.scss */
+div#page01 div.welcome div.text span {
+  color: #7c1632;
+}
+/* line 115, ../sass/styles.scss */
+div#page01 div.welcome div.text div {
+  margin-top: 30px;
+  text-align: right;
+}
+@media screen and (max-width: 1024px) {
+  /* line 107, ../sass/styles.scss */
+  div#page01 div.welcome div.text {
+    font-size: 1.3rem;
+  }
+}
+/* line 124, ../sass/styles.scss */
+div#page01 div.welcome div.close_welcome {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: "GameOfThrones", Arial;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* line 136, ../sass/styles.scss */
+div#page01 div.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1024px) {
+  /* line 136, ../sass/styles.scss */
+  div#page01 div.wrapper {
+    flex-direction: column;
+  }
+}
+/* line 146, ../sass/styles.scss */
+div#page01 div.wrapper div.left {
+  width: 50%;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  /* line 146, ../sass/styles.scss */
+  div#page01 div.wrapper div.left {
+    width: 100%;
+  }
+}
+/* line 156, ../sass/styles.scss */
+div#page01 div.wrapper div.left div.map {
+  text-align: right;
+  margin-top: 2vh;
+}
+@media screen and (min-width: 1025px) {
+  /* line 159, ../sass/styles.scss */
+  div#page01 div.wrapper div.left div.map img {
+    height: 93vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  /* line 159, ../sass/styles.scss */
+  div#page01 div.wrapper div.left div.map img {
+    width: 100%;
+  }
+}
+/* line 170, ../sass/styles.scss */
+div#page01 div.wrapper div.left div.map div.buttons {
+  position: absolute;
+  bottom: 350px;
+  right: 50px;
+}
+/* line 179, ../sass/styles.scss */
+div#page01 div.wrapper div.right {
+  width: 50%;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  /* line 179, ../sass/styles.scss */
+  div#page01 div.wrapper div.right {
+    width: 100%;
+  }
+}
+/* line 190, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.buttons button {
+  background-color: #faf3e9;
+  border: 3px solid #010101;
+  border-radius: 10px;
+  color: #7c1632;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "GameOfThrones", Arial;
+  font-size: 1.2rem;
+}
+/* line 199, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.buttons button:disabled {
+  color: #d6cece;
+}
+/* line 205, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.top {
+  margin-top: 30px;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 80%;
+}
+/* line 215, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.top h1 {
+  font-family: "GameOfThrones", Arial;
+  font-size: 2rem;
+  padding: 15px;
+  margin: 5px;
+}
+/* line 223, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.top div.subtitle {
+  font-family: "GameOfThrones", Arial;
+}
+/* line 228, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.buttons {
+  margin: 100px 200px auto 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* line 236, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.buttons button:nth-of-type(1) {
+  max-width: 140px;
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+}
+/* line 242, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.buttons button:nth-of-type(2) {
+  max-width: 140px;
+  position: fixed;
+  bottom: 10px;
+  right: 150px;
+}
+/* line 249, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 1024px) {
+  /* line 249, ../sass/styles.scss */
+  div#page01 div.wrapper div.right div.houses {
+    flex-direction: column;
+    margin: 20px 0;
+    height: 100%;
+    width: 85%;
+  }
+}
+/* line 266, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house {
+  margin: 10px;
+  padding: 21px;
+  display: block;
+  width: 40%;
+  cursor: pointer;
+  background-image: url(../images/house_background.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 1024px) {
+  /* line 266, ../sass/styles.scss */
+  div#page01 div.wrapper div.right div.houses div.house {
+    width: 100%;
+  }
+}
+/* line 285, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house div.left {
+  float: left;
+  width: 35%;
+}
+/* line 288, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house div.left img {
+  max-width: 70px;
+  margin: 0 25px 0 30px;
+}
+/* line 294, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house div.right {
+  float: left;
+  width: 65%;
+}
+/* line 297, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house div.right h2 {
+  font-family: "GameOfThrones", Arial;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+/* line 307, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house div.right div.hero {
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  font-size: 1rem;
+}
+/* line 310, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house div.right div.hero span {
+  font-family: FuturaCondencedRegular,"Trebuchet MS", Arial, sans-serif;
+}
+/* line 318, ../sass/styles.scss */
+div#page01 div.wrapper div.right div.houses div.house:hover {
+  background: url(../images/house_background_dark.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 85%;
+}
+/* line 333, ../sass/styles.scss */
+div#page01 div.additional_house_info {
+  position: absolute;
+  top: 100px;
+  left: 30%;
+  width: 20vw;
+  padding: 20px;
+  border: 5px solid #7c1632;
+  border-radius: 10px;
+  background-color: #f6e7d1;
+  text-align: center;
+  display: none;
+  font-family: FuturaCondencedRegular,"Trebuchet MS", Arial, sans-serif;
+  font-size: 1rem;
+  webkit-box-shadow: 3px 3px 10px 10px #242424;
+  -moz-box-shadow: 3px 3px 10px 0px #242424;
+  box-shadow: 3px 3px 10px 0px #242424;
+}
+/* line 352, ../sass/styles.scss */
+div#page01 div.additional_house_info div.sigil {
+  padding: 10px;
+}
+/* line 354, ../sass/styles.scss */
+div#page01 div.additional_house_info div.sigil img {
+  width: 50%;
+}
+/* line 359, ../sass/styles.scss */
+div#page01 div.additional_house_info h2 {
+  font-family: "GameOfThrones", Arial;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+/* line 366, ../sass/styles.scss */
+div#page01 div.additional_house_info div.info {
+  text-align: center;
+  font-size: 1.1rem;
+}
+/* line 369, ../sass/styles.scss */
+div#page01 div.additional_house_info div.info span {
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+}
+/* line 375, ../sass/styles.scss */
+div#page01 div.additional_house_info div.info ul {
+  margin-top: 0;
+}
+/* line 380, ../sass/styles.scss */
+div#page01 div.additional_house_info div.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* line 391, ../sass/styles.scss */
+div#page02 {
+  display: none;
+  position: relative;
+  /** GAME STYLES s**/
+}
+/* line 395, ../sass/styles.scss */
+div#page02 div.round {
+  position: fixed;
+  left: 40%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background-color: #7c1632;
+  padding: 50px;
+  border: 10px solid #faf3e9;
+  color: #faf3e9;
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  font-size: 2rem;
+  opacity: 0;
+  webkit-box-shadow: 3px 3px 10px 10px #242424;
+  -moz-box-shadow: 3px 3px 10px 0px #242424;
+  box-shadow: 3px 3px 10px 0px #242424;
+}
+/* line 415, ../sass/styles.scss */
+div#page02 div.flashBanner {
+  position: fixed;
+  left: 40%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background-color: #7c1632;
+  padding: 50px;
+  border: 10px solid #faf3e9;
+  color: #faf3e9;
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  font-size: 2rem;
+  opacity: 0;
+  webkit-box-shadow: 3px 3px 10px 10px #242424;
+  -moz-box-shadow: 3px 3px 10px 0px #242424;
+  box-shadow: 3px 3px 10px 0px #242424;
+}
+/* line 436, ../sass/styles.scss */
+div#page02 div.trap {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+/* line 443, ../sass/styles.scss */
+div#page02 div.trap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+/* line 450, ../sass/styles.scss */
+div#page02 div.trap div.message {
+  text-align: center;
+  margin: 10px 100px;
+  float: left;
+  margin-top: 500px;
+  opacity: 100;
+  width: 100%;
+  color: #faf3e9;
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  font-size: 2rem;
+  background-color: #7c1632;
+  padding: 10px;
+}
+/* line 470, ../sass/styles.scss */
+div#page02 canvas {
+  width: 100vw;
+}
+/* line 474, ../sass/styles.scss */
+div#page02 div.logo {
+  display: flex;
+  position: fixed;
+  max-width: 20%;
+  max-height: 24%;
+  top: 10%;
+  left: 5%;
+  z-index: 100;
+  webkit-box-shadow: 3px 3px 10px 10px #242424;
+  -moz-box-shadow: 3px 3px 10px 0px #242424;
+  box-shadow: 3px 3px 10px 0px #242424;
+}
+/* line 487, ../sass/styles.scss */
+div#page02 div.logo img {
+  display: inline-block;
+  width: 100%;
+}
+/* line 495, ../sass/styles.scss */
+div#page02 div.dice {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 180px;
+  top: 30%;
+  right: 5%;
+  z-index: 100;
+  text-align: center;
+  webkit-box-shadow: 3px 3px 10px 10px #242424;
+  -moz-box-shadow: 3px 3px 10px 0px #242424;
+  box-shadow: 3px 3px 10px 0px #242424;
+  background-color: #f6e7d1;
+  border: 5px solid #faf3e9;
+  border-radius: 10px;
+}
+/* line 512, ../sass/styles.scss */
+div#page02 div.dice div.num {
+  font-family: FuturaCondencedRegular,"Trebuchet MS", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+/* line 519, ../sass/styles.scss */
+div#page02 div.dice div.sigil {
+  margin: 10px 0 0 0;
+}
+/* line 522, ../sass/styles.scss */
+div#page02 div.dice div.sigil img {
+  width: 50%;
+}
+/* line 529, ../sass/styles.scss */
+div#page02 div.dice div.hero {
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  font-size: 2rem;
+  margin: 15px 20px;
+}
+/* line 537, ../sass/styles.scss */
+div#page02 div.dice button {
+  background-color: #7c1632;
+  border: 3px solid #faf3e9;
+  color: #faf3e9;
+  display: inline-block;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px 0;
+  outline: none;
+  cursor: pointer;
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  font-size: 1.2rem;
+  webkit-box-shadow: 3px 3px 10px 10px #242424;
+  -moz-box-shadow: 3px 3px 10px 0px #242424;
+  box-shadow: 3px 3px 10px 0px #242424;
+}
+/* line 555, ../sass/styles.scss */
+div#page02 div.dice button:active {
+  webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 562, ../sass/styles.scss */
+div#page02 div.dice img {
+  display: inline-block;
+  width: 50%;
+}
+/* line 569, ../sass/styles.scss */
+div#page02 div.dice div.dice div.image img {
+  max-width: 100px;
+  animation: rotation 2s infinite linear;
+}
+
+/* line 584, ../sass/styles.scss */
+div#page03 {
+  background-image: url("/noroff/racetothewall/assets/images/winner_background.jpg");
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 593, ../sass/styles.scss */
+div#page03 div.top {
+  background-color: rgba(35, 31, 32, 0.5);
+  margin-top: 50px;
+  padding: 50px;
+}
+/* line 598, ../sass/styles.scss */
+div#page03 div.top div.heading {
+  font-family: "GameOfThrones", Arial;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #f6e7d1;
+}
+/* line 605, ../sass/styles.scss */
+div#page03 div.top div.subheading {
+  font-family: FuturaCondencedRegular,"Trebuchet MS", Arial, sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #f6e7d1;
+  margin-top: 40px;
+}
+/* line 614, ../sass/styles.scss */
+div#page03 div.score {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+/* line 620, ../sass/styles.scss */
+div#page03 div.score div.player {
+  width: 40vw;
+  margin: 40px auto;
+  padding: 20px 20px 0 20px;
+  height: 300px;
+}
+/* line 629, ../sass/styles.scss */
+div#page03 div.score div.player div.subheading {
+  font-family: "GameOfThrones", Arial;
+  font-size: 2.7rem;
+  text-align: center;
+  color: #f6e7d1;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+/* line 642, ../sass/styles.scss */
+div#page03 div.score div.player div.house {
+  margin: 10px;
+  padding: 21px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  cursor: pointer;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  width: 50%;
+}
+/* line 654, ../sass/styles.scss */
+div#page03 div.score div.player div.house img {
+  width: 300px;
+  margin: 0 25px 0 30px;
+}
+/* line 660, ../sass/styles.scss */
+div#page03 div.score div.player div.house div.house_name {
+  font-family: FuturaCondencedBold,"Trebuchet MS", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #010101;
+  -webkit-text-stroke: 2px #faf3e9;
+  font-size: 2.3rem;
+  margin: 10px 0;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  margin-top: 160px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
